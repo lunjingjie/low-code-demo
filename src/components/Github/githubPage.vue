@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup lang="ts" name="Github">
-const openGithub = () => {
-  window.open('https://github.com', '_blank');
-}
+  const openGithub = () => {
+    window.open('https://github.com', '_blank');
+  };
 </script>

@@ -27,9 +27,9 @@
                 </div>
                 <a-form-item name="name">
                   <a-input
-                    @keyup.enter="login"
-                    style="display: inline-block; width: 292px"
                     v-model:value="formState.name"
+                    style="display: inline-block; width: 292px"
+                    @keyup.enter="login"
                   ></a-input>
                 </a-form-item>
               </div>
@@ -45,9 +45,9 @@
                 </div>
                 <a-form-item name="password">
                   <a-input-password
-                    @keyup.enter="login"
-                    style="display: inlin-block; width: 292px"
                     v-model:value="formState.password"
+                    style="display: inlin-block; width: 292px"
+                    @keyup.enter="login"
                   ></a-input-password>
                 </a-form-item>
               </div>
@@ -56,7 +56,7 @@
               style="display: flex; justify-content: space-between; width: 380px; font-size: 14px"
             >
               <div style="display: flex; align-items: center">
-                <a-checkbox class="login-checkbox" v-model:checked="rememberPsw">
+                <a-checkbox v-model:checked="rememberPsw" class="login-checkbox">
                   <span style="color: #fff"> 记住密码 </span>
                 </a-checkbox>
               </div>
@@ -70,8 +70,8 @@
             height="70"
             width="250"
             alt=""
-            @click="login"
             style="padding-top: 5px"
+            @click="login"
           />
         </div>
       </template>

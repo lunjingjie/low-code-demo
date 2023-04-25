@@ -21,9 +21,9 @@
           </template>
           <template #title>{{ item.name }}</template>
           <a-menu-item
-            @click="redirectPage(sub.url)"
             v-for="sub in item.children"
             :key="sub.name"
+            @click="redirectPage(sub.url)"
             >{{ sub.name }}</a-menu-item
           >
         </a-sub-menu>

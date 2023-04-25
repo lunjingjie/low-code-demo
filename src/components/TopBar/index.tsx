@@ -1,9 +1,9 @@
 import { defineComponent } from 'vue';
 import Logo from '/@/components/Logo';
 import FlexBox from '../FlexBox';
-import ThemeSwitch from '/@/components/ThemeSwitch/index.vue';
-import Language from '/@/components/Language/index.vue';
-import Github from '/@/components/Github/index.vue';
+import ThemeSwitch from '/@/components/ThemeSwitch/themePage.vue';
+import Language from '/@/components/Language/languagePage.vue';
+import Github from '/@/components/Github/githubPage.vue';
 
 export default defineComponent({
   name: 'TopBar',

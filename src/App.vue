@@ -8,15 +8,7 @@
 <script setup>
   import Layout from '/@/components/layout/AppLayout';
   import zhCN from 'ant-design-vue/es/locale/zh_CN';
-  import { ConfigProvider } from 'ant-design-vue';
+  import { useThemeColor } from '/@/utils/hooks';
 
-  ConfigProvider.config({
-    theme: {
-      primaryColor: 'red',
-      errorColor: '#ff4d4f',
-      warningColor: '#faad14',
-      successColor: '#52c41a',
-      infoColor: '#1890ff',
-    },
-  });
+  useThemeColor('light');
 </script>

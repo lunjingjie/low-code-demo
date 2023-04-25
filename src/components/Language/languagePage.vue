@@ -9,6 +9,6 @@
 <script setup lang="ts" name="Language">
   import { ref } from 'vue';
   import { Language } from '/#/common';
- 
+
   const language = ref<Language>('cn');
 </script>
