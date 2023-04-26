@@ -10,7 +10,7 @@ export default defineComponent({
   setup() {
     return () => <FlexBox flexDirection='row' justifyContent='space-between' style={{margin: '0 10px', height: '48px'}}>
       <Logo></Logo>
-      <FlexBox flexDirection='row' justifyContent='space-around' style={{width: '250px'}}>
+      <FlexBox flexDirection='row' justifyContent='space-around' style={{width: '180px'}}>
         <ThemeSwitch></ThemeSwitch>
         <Language></Language>
         <Github></Github>

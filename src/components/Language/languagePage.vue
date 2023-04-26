@@ -1,14 +1,20 @@
 <template>
-  <div>
-    <a-radio-group v-model:value="language">
-      <a-radio-button value="cn">中文</a-radio-button>
-      <a-radio-button value="en">英文</a-radio-button>
-    </a-radio-group>
-  </div>
+  <a-dropdown>
+    <template #overlay>
+      <a-menu @click="handleMenuClick">
+        <a-menu-item key="1"> 简体中文 </a-menu-item>
+        <a-menu-item key="2"> English </a-menu-item>
+      </a-menu>
+    </template>
+    <a-button shape="circle">
+      <template #icon>
+        <translation-outlined />
+      </template>
+    </a-button>
+  </a-dropdown>
 </template>
 <script setup lang="ts" name="Language">
-  import { ref } from 'vue';
-  import { Language } from '/#/common';
-
-  const language = ref<Language>('cn');
+  const handleMenuClick = (e) => {
+    console.log(e);
+  };
 </script>

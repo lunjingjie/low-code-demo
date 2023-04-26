@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import TopBar from '/@/components/TopBar';
 import Divider from '/@/components/antdVue/Divider';
+import NavTab from '/@/components/NavTab/indexPage.vue';
 
 export default defineComponent({
   name: 'Layout',
@@ -12,6 +13,7 @@ export default defineComponent({
       <div>
       <TopBar></TopBar>
       <Divider />
+      <NavTab />
     </div>
     );
   },
