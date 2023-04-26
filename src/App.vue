@@ -1,5 +1,5 @@
 <template>
-  <a-config-provider :locale="zhCN">
+  <a-config-provider :locale="zhCN" prefix-cls="custom">
     <div style="width: 100%; height: 100%">
       <Layout />
     </div>
