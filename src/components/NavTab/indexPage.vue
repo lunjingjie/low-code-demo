@@ -1,5 +1,10 @@
 <template>
-  <a-tabs v-model:activeKey="activeKey" tab-position="left" :style="{ height: navHeight }">
+  <a-tabs
+    v-model:activeKey="activeKey"
+    tab-position="left"
+    style="color: #a1a1a1"
+    :style="{ height: navHeight }"
+  >
     <a-tab-pane :key="LeftNavType.components">
       <template #tab>
         <a-tooltip placement="rightTop">
@@ -9,7 +14,7 @@
           <appstore-outlined style="font-size: 20px" />
         </a-tooltip>
       </template>
-      test
+      <Resource />
     </a-tab-pane>
     <a-tab-pane :key="LeftNavType.pages">
       <template #tab>
@@ -47,6 +52,7 @@
   import { computed, ref } from 'vue';
   import { LeftNavType } from '/@/utils/common';
   import { useWindowSize } from '@vueuse/core';
+  import Resource from '/@/components/Resource/resourcePage.vue';
 
   const { height } = useWindowSize();
 

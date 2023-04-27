@@ -6,7 +6,7 @@
         <a-menu-item key="2"> English </a-menu-item>
       </a-menu>
     </template>
-    <a-button shape="circle">
+    <a-button shape="circle" style="width: 33px">
       <template #icon>
         <translation-outlined />
       </template>

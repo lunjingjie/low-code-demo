@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue';
 import TopBar from '/@/components/TopBar';
 import Divider from '/@/components/antdVue/Divider';
-import NavTab from '/@/components/NavTab/indexPage.vue';
+import MainPage from '/@/pages/main/mainPage';
 
 export default defineComponent({
   name: 'Layout',
@@ -11,10 +11,11 @@ export default defineComponent({
   setup() {
     return () => (
       <div>
-      <TopBar></TopBar>
-      <Divider />
-      <NavTab />
-    </div>
+        <TopBar></TopBar>
+        <Divider />
+        {/* <NavTab /> */}
+        <MainPage />
+      </div>
     );
   },
 });

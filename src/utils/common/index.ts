@@ -7,7 +7,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  primaryColor: '#0AA679',
+  primaryColor: '#1777FF',
   errorColor: '#ff4d4f',
   warningColor: '#faad14',
   successColor: '#52c41a',
