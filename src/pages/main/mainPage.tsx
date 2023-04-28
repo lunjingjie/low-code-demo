@@ -4,6 +4,7 @@ import NavTab from '/@/components/NavTab/indexPage.vue';
 import Editor from './editorPage.vue';
 import Attrs from './attrsPage.vue';
 import { useWindowSize } from '@vueuse/core';
+import Divider from '/@/components/antdVue/Divider';
 
 export default defineComponent({
   name: 'MainPage',
@@ -16,10 +17,10 @@ export default defineComponent({
 
     return () => (
       <FlexBox justifyContent="space-around" flexDirection="row">
-        <NavTab style={{ width: '600px' }} />
-        <a-divider type="vertical" style={{height: navHeight.value}}></a-divider>
+        <NavTab style={{ width: '600px', marginRight: '15px' }} />
+        <Divider type="vertical" style={{ height: navHeight.value }}></Divider>
         <Editor style={{ width: '100%' }} />
-        <a-divider type="vertical" style={{height: navHeight.value}}></a-divider>
+        <Divider type="vertical" style={{ height: navHeight.value }}></Divider>
         <Attrs style={{ width: '450px' }} />
       </FlexBox>
     );

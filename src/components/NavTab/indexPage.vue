@@ -2,8 +2,7 @@
   <a-tabs
     v-model:activeKey="activeKey"
     tab-position="left"
-    style="color: #a1a1a1"
-    :style="{ height: navHeight }"
+    :style="{ height: navHeight, ...wrapStyle }"
   >
     <a-tab-pane :key="LeftNavType.components">
       <template #tab>
@@ -53,8 +52,16 @@
   import { LeftNavType } from '/@/utils/common';
   import { useWindowSize } from '@vueuse/core';
   import Resource from '/@/components/Resource/resourcePage.vue';
+  import { useSystemStore } from '/@/stores/system';
 
+  const store = useSystemStore();
   const { height } = useWindowSize();
+
+  const wrapStyle = computed(() => {
+    return {
+      color: store.theme === 'dark' ? '#ebebeb99' : '#000',
+    };
+  });
 
   const navHeight = computed(() => {
     return height.value - 60 + 'px';

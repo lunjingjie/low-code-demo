@@ -11,11 +11,18 @@ export default defineComponent({
   name: 'FlexBox',
   props: buttonProps(),
   setup(props, { slots }) {
-
-    const centerStyle = props.flexDirection === 'row' ? {alignItems: 'center'} : {textAlign: 'center'};
+    const centerStyle =
+      props.flexDirection === 'row' ? { alignItems: 'center' } : { textAlign: 'center' };
 
     return () => (
-      <div style={{ display: 'flex', justifyContent: props.justifyContent, flexDirection: props.flexDirection, ...centerStyle as any }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: props.justifyContent,
+          flexDirection: props.flexDirection,
+          ...(centerStyle as any),
+        }}
+      >
         {slots.default?.()}
       </div>
     );

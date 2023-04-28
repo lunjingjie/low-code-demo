@@ -15,8 +15,12 @@ export type IMaterial = {
   resource: {
     icon?: any;
     color?: string;
+    style?: {
+      top?: number;
+      left?: number;
+    };
   };
-}
+};
 
 export type MaterialGroup = {
   titleKey: string;

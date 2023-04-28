@@ -12,13 +12,17 @@
   import { Theme } from '/#/common';
   import { ref } from 'vue';
   import { useThemeColor } from '/@/utils/hooks';
+  import { useSystemStore } from '/@/stores/system';
 
   const theme = ref<Theme>('light');
+  const { setTheme } = useSystemStore();
   const changeValue = (checked: boolean) => {
     if (checked) {
       useThemeColor('dark');
+      setTheme('dark');
     } else {
       useThemeColor('light');
+      setTheme('light');
     }
   };
 </script>

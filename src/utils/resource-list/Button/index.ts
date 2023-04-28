@@ -7,5 +7,9 @@ export const ButtonResource: IMaterial = {
   resource: {
     icon: '',
     color: 'yellow',
-  }
+    style: {
+      top: 0,
+      left: 0,
+    },
+  },
 };
