@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type Theme = 'light' | 'dark';
 export type FlexJustifyContent =
   | 'flex-start'
@@ -10,6 +11,7 @@ export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 export type Language = 'en' | 'cn';
 
 export type IMaterial = {
+  id?: string;
   name: string;
   component: any;
   resource: {

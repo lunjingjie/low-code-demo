@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+
 /**
  * 根据nodeId获取对应节点下的数据
  * @param {object} treeData 树形数据
@@ -191,4 +193,12 @@ export const colorMap = {
   E1: '#FFEE58',
   E2: '#1E88E5',
   E3: '#43A047',
+};
+
+/**
+ * 创建唯一id
+ * @returns 唯一id
+ */
+export const generateID = () => {
+  return nanoid();
 };

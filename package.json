@@ -21,6 +21,7 @@
     "husky": "^8.0.1",
     "leaflet": "^1.9.3",
     "mockjs": "^1.1.0",
+    "nanoid": "^4.0.2",
     "node-sass": "^7.0.3",
     "pinia": "^2.0.26",
     "sass-loader": "^13.1.0",
