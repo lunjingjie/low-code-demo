@@ -13,14 +13,15 @@ export type Language = 'en' | 'cn';
 export type IMaterial = {
   id?: string;
   name: string;
+  panelIcon?: string;
   component: any;
+  color?: string;
   resource: {
-    icon?: any;
-    color?: string;
     style?: {
       top?: number;
       left?: number;
     };
+    [key: string]: any;
   };
 };
 

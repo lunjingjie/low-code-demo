@@ -1,7 +1,7 @@
 <template>
   <div
     ref="editorRef"
-    style="background-color: bisque"
+    style="background-color: bisque; position: relative"
     :style="{ height: navHeight }"
     @drop="handleDrop"
     @dragenter.prevent
@@ -11,8 +11,12 @@
       :is="(item as any).component.name"
       v-for="item in editorStore.componentList"
       :key="(item as any).id"
+      v-bind="(item as any).resource.element?.props"
+      v-model="(item as any).resource.modelValue"
       style="position: absolute"
+      :style="(item as any).resource.style"
     >
+      {{ (item as any).resource.element?.children }}
     </component>
   </div>
 </template>
@@ -41,10 +45,9 @@
     if (index) {
       const flatResourceList = resourceList.map((item) => item.items).flat();
       const component = deepClone(flatResourceList[index]);
-      component.resource.style.top = e.clientY - rectInfo.y;
-      component.resource.style.left = e.clientX - rectInfo.x;
+      component.resource.style.top = `${e.clientY - rectInfo.y}px`;
+      component.resource.style.left = `${e.clientX - rectInfo.x}px`;
       component.id = generateID();
-      console.log('component', component);
       addComponent(component, index);
     }
   };

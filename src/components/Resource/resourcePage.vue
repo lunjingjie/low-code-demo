@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
     <div style="font-weight: 600; font-size: 16px">组件资源</div>
@@ -7,20 +8,23 @@
       <div
         v-for="(resource, rIndex) in item.items"
         :key="resource.name"
-        draggable
         :data-index="rIndex"
-        style="display: inline-block; margin-top: 10px; width: 33%; text-align: center"
+        style="
+          display: inline-block;
+          margin-top: 10px;
+          width: 33%;
+          text-align: center;
+          user-select: none;
+        "
       >
         <!-- <div :style="{ background: store.theme === 'dark' ? '#313031' : '#F1F3F4' }">
         </div> -->
-        <div>
-          <img
-            src="../../assets/components/icon/button.png"
-            width="24"
-            height="24"
-            :data-index="rIndex"
-          />
-        </div>
+        <div
+          draggable="true"
+          :data-index="rIndex"
+          :style="{ fill: resource.color }"
+          v-html="resource.panelIcon"
+        ></div>
         <div>{{ resource.name }}</div>
       </div>
     </div>
@@ -36,3 +40,8 @@
     e.dataTransfer.setData('index', e.target.dataset.index);
   };
 </script>
+<style>
+  svg .icon {
+    margin: 0 auto;
+  }
+</style>
